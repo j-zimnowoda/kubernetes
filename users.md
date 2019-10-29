@@ -71,22 +71,26 @@ $ k get pod
 Error from server (Forbidden): pods is forbidden: User "myuser" cannot list resource "pods" in API group "" in the namespace "default"
 ```
 
+Switch back to user that you used before, e.g.:
+```
+$ k config use-context kubernetes-admin@kubernetes
+```
 
 
 Create clustert role:
 ```
-kubectl create clusterrole pod-reader --verb=get,list,watch --resource=pod
+$ kubectl create clusterrole pod-reader --verb=get,list,watch --resource=pod
 ```
 
 Bind cluster role:
 ```
-kubectl create clusterrolebinding myrolebinding --clusterrole=pod-reader --group=myusergroup
+$ kubectl create clusterrolebinding myrolebinding --clusterrole=pod-reader --group=myusergroup
 ```
-
 
 Try to get list of Pods (no error is expected):
 ```
 $ k get pod
-<>
+NAME            READY   STATUS      RESTARTS   AGE
+<output trunkated>
 ```
 
