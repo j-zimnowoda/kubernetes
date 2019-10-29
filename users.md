@@ -1,6 +1,5 @@
-# Create a new user that uses certificates to authenticates with cluster.
+# Create a user that uses certificates to authenticates with cluster.
 A user should have permission to all namespaces and to get/list/watch available pods in all namespaces namespaces
-
 
 Generate private key:
 ```
