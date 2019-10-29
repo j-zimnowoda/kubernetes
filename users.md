@@ -1,5 +1,5 @@
-# Create user that uses certificates to authenticates with cluster.
-A user should have permission to all namespaces and to get/list/watch available pods in all namespaces namespaces
+# Case 1
+Create user that uses certificates to authenticates with cluster. A user should have permission to all namespaces and to get/list/watch available pods in all namespaces namespaces
 
 Generate private key:
 ```
@@ -93,7 +93,8 @@ NAME            READY   STATUS      RESTARTS   AGE
 <output trunkated>
 ```
 
-# Create user that uses certificates to authenticates with cluster.
+# Case 2
+Create user that uses certificates to authenticates with cluster.
 A user should have permission to `developer' namespace and to get/list/watch available pods in all namespaces namespaces
 
 As before but this time indicate in context a specific namespace
