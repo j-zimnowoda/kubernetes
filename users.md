@@ -1,4 +1,4 @@
-# Create a user that uses certificates to authenticates with cluster.
+# Create user that uses certificates to authenticates with cluster.
 A user should have permission to all namespaces and to get/list/watch available pods in all namespaces namespaces
 
 Generate private key:
@@ -93,3 +93,20 @@ NAME            READY   STATUS      RESTARTS   AGE
 <output trunkated>
 ```
 
+# Create user that uses certificates to authenticates with cluster.
+A user should have permission to `developer' namespace and to get/list/watch available pods in all namespaces namespaces
+
+As before but this time indicate in context a specific namespace
+```
+k config set-context myuser-context --cluster=kubernetes --user=myuser --namespace=developer
+```
+
+Create `developer` namespace
+```
+k create ns developer
+```
+
+Create `Role` instead of `ClusterRole`
+
+
+Create `RoleBinding` instead of `ClusterRoleBinding`
