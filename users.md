@@ -1,4 +1,4 @@
-# Case 1
+# Use case 1
 Create user that uses certificates to authenticates with cluster. A user should have permission to all namespaces and to get/list/watch available pods in all namespaces namespaces
 
 Generate private key:
@@ -93,7 +93,7 @@ NAME            READY   STATUS      RESTARTS   AGE
 <output trunkated>
 ```
 
-# Case 2
+# Use case 2
 Create user that uses certificates to authenticates with cluster.
 A user should have permission to `developer' namespace and to get/list/watch available pods in all namespaces namespaces
 
